@@ -1,5 +1,3 @@
-from collections import Counter
-
 with open('i') as f:
     crabs=[int(i) for i in f.readline().split(',')]
 f.close()
@@ -13,7 +11,6 @@ def calculFuel(crabs,position):
     return fuel
 
 #solution brute force (encore)
-count=Counter(crabs)
-maxi=max(count)
+maxi=max(crabs)
 res=min([calculFuel(crabs,i) for i in range(maxi+1)])
 print("résultat:",res)
