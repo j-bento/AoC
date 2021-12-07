@@ -8,10 +8,11 @@ f.close()
 def calculFuel(crabs,position):
     fuel=0
     for i in crabs:
-        fuel+= abs(i-position)
+        dist=abs(i-position)
+        fuel+=(dist*(dist+1))//2
     return fuel
 
-#solution légèrement brute force
+#solution brute force (encore)
 count=Counter(crabs)
 maxi=max(count)
 res=min([calculFuel(crabs,i) for i in range(maxi+1)])
