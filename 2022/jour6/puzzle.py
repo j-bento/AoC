@@ -1,6 +1,6 @@
 nom_fich = input("Choisissez sur quel input tester la solution (i ou it): ")
 try:
-    f=open(nom_fich)
+    f=open(nom_fich+".txt")
     choix = int(input("Choisissez sur quelle partie tester la solution (1 ou 2): "))
     if choix < 1 or choix > 2:
         raise ValueError
