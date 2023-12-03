@@ -1,3 +1,5 @@
+from functools import reduce
+import operator
 def read_input(file_path, choice=1):
     try:
         if choice < 1 or choice > 2:
@@ -15,3 +17,6 @@ def read_input(file_path, choice=1):
 class Choice:
     REAL = 1
     TEST = 2
+
+def prod(iterable):
+    return reduce(operator.mul, iterable, 1)
