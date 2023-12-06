@@ -55,5 +55,4 @@ for line in file:
                 if int(amount) > min_blue_cubes:
                     min_blue_cubes = int(amount)
     _sum += min_red_cubes * min_green_cubes * min_blue_cubes
-    print(min_red_cubes, min_green_cubes, min_blue_cubes)
 print(_sum)
