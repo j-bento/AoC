@@ -1,13 +1,13 @@
+from pathlib import Path
 import sys
 import os
 
 current = os.path.dirname(os.path.realpath(__file__))
-
-parent = os.path.dirname(current)
-
-sys.path.append(parent)
+parent_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(parent_dir))
 
 from helper import *
+
 def init_guard_pos(matrix):
     guardPos = (0, 0)
     # find the guard position

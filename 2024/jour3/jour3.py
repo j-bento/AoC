@@ -2,12 +2,11 @@ import sys
 import os
 import re
 
+from pathlib import Path
+
 current = os.path.dirname(os.path.realpath(__file__))
-
-parent = os.path.dirname(current)
-
-sys.path.append(parent)
-
+parent_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(parent_dir))
 from helper import *
 
 # Part 1

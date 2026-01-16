@@ -1,11 +1,10 @@
+from pathlib import Path
 import sys
 import os
 
 current = os.path.dirname(os.path.realpath(__file__))
-
-parent = os.path.dirname(current)
-
-sys.path.append(parent)
+parent_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(parent_dir))
 
 from helper import *
 # returns the number of times the word "XMAS" appears in the matrix at the given position
